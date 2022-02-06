@@ -14,7 +14,7 @@ class MainDetails : AppCompatActivity() {
         Glide.with(this).load(intent.getStringExtra("imgUrl").toString())
             .into(img1_iv)
         title_tv.text=intent.getStringExtra("imgTitle")
-        price1_tv.text=intent.getStringExtra("price")
+        price1_tv.text=(resources.getString(R.string.rupees)+" "+intent.getStringExtra("price"))
         details_tv.text=intent.getStringExtra("details")
         arrow_IV.setOnClickListener { finish() }
     }
