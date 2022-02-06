@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Categories">
-        <activity android:name=".MainDetails"></activity>
+        <activity android:name=".MainDetails"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Categories"
             android:screenOrientation="portrait"></activity>
