@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="5dp"
+    android:id="@+id/list_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/categoryName_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="6dp"
+        tools:text="@string/category_1"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rightarrow_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+       android:background="@drawable/dropdownselector"
+        android:fontFamily="sans-serif-medium"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:id="@+id/view"
+        android:layout_height="1dp"
+        android:layout_below="@id/rightarrow_tv"
+        android:background="@color/gray" />
+
+        <HorizontalScrollView
+            android:id="@+id/hScrollview"
+            android:layout_below="@id/view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcview2"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/itemsdetail">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </HorizontalScrollView>
+
+
+
+    </RelativeLayout>
